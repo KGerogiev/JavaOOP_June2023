@@ -1,7 +1,11 @@
 package lab;
 
-import java.io.Serializable;
 
+
+import lab.Anotation.Subject;
+
+import java.io.Serializable;
+@Subject(categories = {"Test", "Annotation"})
 public class Reflection implements Serializable {
 
     private static final String nickName = "Pinguin";
