@@ -2,6 +2,7 @@ package lab;
 
 
 
+import lab.Anotation.Author;
 import lab.Anotation.Subject;
 
 import java.io.Serializable;
@@ -34,23 +35,23 @@ public class Reflection implements Serializable {
         this.setEmail(email);
         this.setZip(2300);
     }
-
+    @Author(name = "Georgi")
     public final String getName() {
         return name;
     }
-
+    @Author(name = "Peter")
     private void setName(String name) {
         this.name = name;
     }
-
+    @Author(name = "Georgi")
     protected String getWebAddress() {
         return webAddress;
     }
-
+    @Author(name = "Peter")
     private void setWebAddress(String webAddress) {
         this.webAddress = webAddress;
     }
-
+    @Author(name = "Georgi")
     public String getEmail() {
         return email;
     }
@@ -58,11 +59,11 @@ public class Reflection implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
-
+    @Author(name = "Georgi")
     protected final int getZip() {
         return zip;
     }
-
+    @Author(name = "Peter")
     private void setZip(int zip) {
         this.zip = zip;
     }
