@@ -13,21 +13,17 @@ public class Main {
 
         System.out.printf("Range: [%d...%d]%n", startNumber, endNumber);
 
-        for(;;){
-                String nextNum = scanner.nextLine();
+        for (; ; ) {
+            String nextNum = scanner.nextLine();
             try {
                 int inputNum = Integer.parseInt(nextNum);
                 if (inputNum >= startNumber && inputNum <= endNumber) {
                     System.out.printf("Valid number: %d%n", inputNum);
                     return;
-                } else {
-                    throw new IllegalArgumentException("Invalid number: " + inputNum);
                 }
-            } catch (NumberFormatException e){
-                System.out.println("Invalid number: " + nextNum);
-            } catch (IllegalArgumentException e ) {
-                System.out.println(e.getMessage());
+            } catch (NumberFormatException e) {
             }
+            System.out.println("Invalid number: " + nextNum);
         }
     }
 }
